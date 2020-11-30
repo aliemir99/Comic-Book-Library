@@ -1,0 +1,11 @@
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\bin\Debug\ComicBookFactories.dll
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\bin\Debug\ComicBookFactories.pdb
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\bin\Debug\ComicBookFactories.dll.config
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\DataAccess\obj\Debug\DataAccess.pdb

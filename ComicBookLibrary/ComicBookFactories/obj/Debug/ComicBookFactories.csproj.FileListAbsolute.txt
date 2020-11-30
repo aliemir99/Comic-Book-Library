@@ -1,0 +1,7 @@
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookFactories\bin\Debug\ComicBookFactories.dll.config
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookFactories\bin\Debug\ComicBookFactories.dll
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookFactories\bin\Debug\ComicBookFactories.pdb
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookFactories\obj\Debug\ComicBookFactories.csproj.CoreCompileInputs.cache
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookFactories\obj\Debug\ComicBookFactories.dll
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookFactories\obj\Debug\ComicBookFactories.pdb
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookFactories\obj\Debug\ComicBookFactories.csprojAssemblyReference.cache
