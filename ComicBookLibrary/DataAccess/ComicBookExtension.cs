@@ -43,5 +43,40 @@ namespace DataAccess
 
             return book;
         }
+        public static List<string> Validate(ComicBook book)
+        {
+            List<string> errorList = new List<string>();
+            if (string.IsNullOrEmpty(book.Name)){
+                errorList.Add("Name of the book cannot be empty.");
+            }
+            if (string.IsNullOrEmpty(book.Description))
+            {
+                errorList.Add("Description of the book cannot be empty.");
+            }
+            if (string.IsNullOrEmpty(book.Author))
+            {
+                errorList.Add("Author of the book cannot be empty.");
+            }
+            if (string.IsNullOrEmpty(book.Designer))
+            {
+                errorList.Add("Designer of the book cannot be empty.");
+            }
+            if (string.IsNullOrEmpty(book.GenreID))
+            {
+                errorList.Add("Genre of the book cannot be empty.");
+            }
+            if (string.IsNullOrEmpty(book.RatingID))
+            {
+                errorList.Add("Rating of the book cannot be empty.");
+            }
+            if (string.IsNullOrEmpty(book.PublisherID))
+            {
+                errorList.Add("Publisher of the book cannot be empty.");
+            }
+            return errorList;
+        }
+
+
+
     }
 }

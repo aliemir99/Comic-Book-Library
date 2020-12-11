@@ -47,11 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About Form\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About Form\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComicsManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ComicsManager.Designer.cs">
       <DependentUpon>ComicsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage Forms\ManageComicBooks.cs">
       <SubType>Form</SubType>
@@ -65,8 +77,20 @@
     <Compile Include="Manage Forms\ManagePersonnels.Designer.cs">
       <DependentUpon>ManagePersonnels.cs</DependentUpon>
     </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\FormState.cs" />
     <Compile Include="Utilities\UIUtilities.cs" />
+    <Compile Include="View Forms\ComicPersonnelLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Forms\ComicPersonnelLink.Designer.cs">
+      <DependentUpon>ComicPersonnelLink.cs</DependentUpon>
+    </Compile>
     <Compile Include="View Forms\Comics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,14 +129,26 @@
     <Compile Include="View Forms\Roles.Designer.cs">
       <DependentUpon>Roles.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About Form\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComicsManager.resx">
       <DependentUpon>ComicsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage Forms\ManageComicBooks.resx">
       <DependentUpon>ManageComicBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage Forms\ManagePersonnels.resx">
       <DependentUpon>ManagePersonnels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Forms\ComicPersonnelLink.resx">
+      <DependentUpon>ComicPersonnelLink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Forms\Comics.resx">
       <DependentUpon>Comics.cs</DependentUpon>
@@ -166,7 +202,58 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\backgroundAbout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\author.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rights.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comicManagerBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topBarComic.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comicBookBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkBlue.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightBlue.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yellow.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comicBackgroundFull.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comicGirl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kaboom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advtimecartoon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darkTime.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottomBar.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

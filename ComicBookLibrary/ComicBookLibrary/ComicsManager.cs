@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComicBookFactories;
+using ComicBookLibrary.About_Form;
 using ComicBookLibrary.Manage_Forms;
+using ComicBookLibrary.View_Forms;
+using VideoGameMaintenance;
 
 namespace ComicBookLibrary
 
@@ -125,6 +128,22 @@ namespace ComicBookLibrary
             managePersonnelForm.MdiParent = this;
             managePersonnelForm.BringToFront();
             managePersonnelForm.Show();
+        }
+
+        private void tsmiAbout_Click(object sender, EventArgs e)
+        {
+            Form about = new frmAbout();
+            about.MdiParent = this;
+            about.BringToFront();
+            about.Show();
+        }
+
+        private void tsmiComicPersonnelLink_Click(object sender, EventArgs e)
+        {
+            Form linkedTableForm = new frmComicPersonnelLink();
+            linkedTableForm.MdiParent = this;
+            linkedTableForm.BringToFront();
+            linkedTableForm.Show();
         }
     }
 }

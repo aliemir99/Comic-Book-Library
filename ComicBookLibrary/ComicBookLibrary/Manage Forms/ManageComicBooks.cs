@@ -22,10 +22,10 @@ namespace ComicBookLibrary.Manage_Forms
         private int lastComicID = 0;
         private int? previousComicID;
         private int? nextComicID;
-        IComicBookRepo comicsRepo;
-        IPersonnelRepo personnelRepo;
-        ComicBook tmpComic;
-        sqlPreFilledTables dataFiller;
+        private IComicBookRepo comicsRepo;
+        private IPersonnelRepo personnelRepo;
+        private ComicBook tmpComic;
+        private sqlPreFilledTables dataFiller;
         
 
         public frmManageComicBooks()
@@ -64,7 +64,6 @@ namespace ComicBookLibrary.Manage_Forms
         }
         private void LoadPersonnels()
         {
-            // FIND A WAY TO MAKE dt.Columns[1].ToString() TO BE THE FULL NAME RATHER THAN JUST FIRST NAME
             var dt1 = personnelRepo.GetPersonnelsTable();
             UIUtilities.BindComboBox(cmbAuthor, dt1, dt1.Columns[1].ToString(), dt1.Columns[0].ToString());
 
@@ -231,21 +230,41 @@ namespace ComicBookLibrary.Manage_Forms
         private void btnSave_Click(object sender, EventArgs e)
         {
             tmpComic = new ComicBook();
+            List<string> errors = new List<string>();
             if (btnSave.Text == "Create")
             {
                 LoadComicFromForm(tmpComic);
-                comicsRepo.Create(tmpComic);
+                errors = ComicBookExtension.Validate(tmpComic);
+                if(errors.Count > 0)
+                    MessageBox.Show(DisplayErrors(errors));
+                else
+                    comicsRepo.Create(tmpComic);
+
             }
             else if (btnSave.Text == "Save")
             {
                 LoadComicFromForm(tmpComic);
-                comicsRepo.Save(tmpComic);
+                errors = ComicBookExtension.Validate(tmpComic);
+                if (errors.Count > 0)
+                    MessageBox.Show(DisplayErrors(errors));
+                else
+                    comicsRepo.Save(tmpComic);
+
             }
-            else
-                MessageBox.Show("The database reported no rows affected");
 
             NavigationState(true);
         }
+
+        private string DisplayErrors(List<string> errors)
+        {
+            string errorMsg = "";
+            foreach(string error in errors)
+            {
+                errorMsg += error + "\n";   
+            }
+            return errorMsg;
+        }
+
         private void LoadComicFromForm(ComicBook comic)
         {
             if (btnSave.Text == "Save")

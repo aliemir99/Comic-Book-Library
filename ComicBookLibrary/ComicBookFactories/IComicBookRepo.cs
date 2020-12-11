@@ -1,9 +1,7 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 
 namespace ComicBookFactories
@@ -16,6 +14,8 @@ namespace ComicBookFactories
 
         int Delete(int bookID);
 
+        int GetLastInsertedComicID();
+
         ComicBook GetComicBook(int bookID);
 
         List<ComicBook> GetComicBooks();
@@ -23,6 +23,8 @@ namespace ComicBookFactories
         int GetFirstComicID();
 
         DataSet GetComicDetailDataSet(int comicID);
+
+        int linkPersonnelToComicBook(ComicBook book);
     }
     
 }

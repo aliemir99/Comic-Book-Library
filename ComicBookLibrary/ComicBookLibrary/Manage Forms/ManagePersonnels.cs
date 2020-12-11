@@ -1,6 +1,8 @@
 ﻿using ComicBookFactories;
 using ComicBookLibrary.Utilities;
+using DataAccess;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -15,8 +17,8 @@ namespace ComicBookLibrary.Manage_Forms
         private int lastPersonnelID= 0;
         private int? previousPersonnelID;
         private int? nextPersonnelID;
-        IPersonnelRepo personnelRepo;
-        Personnel tmpPersonnel;
+        private IPersonnelRepo personnelRepo;
+        private Personnel tmpPersonnel;
 
         public frmManagePersonnels()
         {
@@ -153,20 +155,36 @@ namespace ComicBookLibrary.Manage_Forms
         private void btnSave_Click(object sender, EventArgs e)
         {
             tmpPersonnel = new Personnel();
+            List<string> errors = new List<string>();
             if (btnSave.Text == "Create")
             {
                 LoadPersonnelFromForm(tmpPersonnel);
-                personnelRepo.Create(tmpPersonnel);
+                errors = PersonnelExtension.Validate(tmpPersonnel);
+                if (errors.Count > 0)
+                    MessageBox.Show(DisplayErrors(errors));
+                else
+                    personnelRepo.Create(tmpPersonnel);
             }
             else if (btnSave.Text == "Save")
             {
                 LoadPersonnelFromForm(tmpPersonnel);
-                personnelRepo.Save(tmpPersonnel);
+                errors = PersonnelExtension.Validate(tmpPersonnel);
+                if (errors.Count > 0)
+                    MessageBox.Show(DisplayErrors(errors));
+                else
+                    personnelRepo.Save(tmpPersonnel);
             }
-            else
-                MessageBox.Show("The database reported no rows affected");
-
+       
             NavigationState(true);
+        }
+        private string DisplayErrors(List<string> errors)
+        {
+            string errorMsg = "";
+            foreach (string error in errors)
+            {
+                errorMsg += error + "\n";
+            }
+            return errorMsg;
         }
         private void LoadPersonnelFromForm(Personnel personnel)
         {

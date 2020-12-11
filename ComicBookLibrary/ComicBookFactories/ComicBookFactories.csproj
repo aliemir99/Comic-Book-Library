@@ -42,7 +42,10 @@
     <Compile Include="ComicBook.cs" />
     <Compile Include="ComicBookFactory.cs" />
     <Compile Include="IComicBookRepo.cs" />
+    <Compile Include="ILoginRepo.cs" />
     <Compile Include="IPersonnelRepo.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginFactory.cs" />
     <Compile Include="Personnel.cs" />
     <Compile Include="PersonnelFactory.cs" />
   </ItemGroup>

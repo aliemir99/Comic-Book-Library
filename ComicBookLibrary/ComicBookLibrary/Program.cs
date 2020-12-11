@@ -19,10 +19,11 @@ namespace ComicBookLibrary
             DataAccess.DataAccess.connectionString = CM.ConnectionStrings["ComicBookCatalog"].ConnectionString;
             ComicBookFactory.ComicBookRepoFunc = (() => new SqlComicBook());
             PersonnelFactory.PersonnelRepoFunc = (() => new SqlPersonnel());
+            LoginFactory.LoginRepoFunc = (() => new sqlLogin());
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mdiComics());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -50,6 +50,15 @@ namespace DataAccess
             return dt;
         }
 
+        public DataTable GetComicPersonnelLinkTable()
+        {
+            var sqlGetLinkTable = "SELECT * FROM Link_Personnel_to_ComicBook";
+            var cmd = new SqlCommand(sqlGetLinkTable);
+
+            var dt = DataAccess.GetDataTable(cmd);
+
+            return dt;
+        }
 
     }
 }

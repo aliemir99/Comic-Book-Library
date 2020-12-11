@@ -23,3 +23,7 @@ C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibr
 C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookLibrary\obj\Debug\ComicBookLibrary.frmRoles.resources
 C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookLibrary\obj\Debug\ComicBookLibrary.Manage_Forms.frmManageComicBooks.resources
 C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookLibrary\obj\Debug\ComicBookLibrary.Manage_Forms.frmManagePersonnels.resources
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookLibrary\obj\Debug\VideoGameMaintenance.SplashScreen.resources
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookLibrary\obj\Debug\ComicBookLibrary.frmLogin.resources
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookLibrary\obj\Debug\ComicBookLibrary.View_Forms.frmComicPersonnelLink.resources
+C:\Users\aliem\Desktop\Fall2020\Database Programming\Final Project\ComicBookLibrary\ComicBookLibrary\obj\Debug\ComicBookLibrary.About_Form.frmAbout.resources

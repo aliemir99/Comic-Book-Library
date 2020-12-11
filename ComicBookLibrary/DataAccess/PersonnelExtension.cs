@@ -39,5 +39,19 @@ namespace DataAccess
 
             return personnel;
         }
+
+        public static List<string> Validate(Personnel personnel)
+        {
+            List<string> errorList = new List<string>();
+            if (string.IsNullOrEmpty(personnel.FirstName))
+            {
+                errorList.Add("First name of the personnel cannot be empty.");
+            }
+            if (string.IsNullOrEmpty(personnel.LastName))
+            {
+                errorList.Add("Last name of the personnel cannot be empty.");
+            }
+            return errorList;
+        }
     }
 }

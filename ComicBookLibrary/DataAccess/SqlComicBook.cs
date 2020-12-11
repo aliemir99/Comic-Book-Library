@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using ComicBookFactories;
 namespace DataAccess
 {
- 
+
     public class SqlComicBook : IComicBookRepo
     {
         public int Create(ComicBook book)
@@ -23,6 +23,8 @@ namespace DataAccess
             cmd.Parameters.AddWithValue("@PublisherID", book.PublisherID);
 
             int rowsAffected = DataAccess.ExecuteNonQuery(cmd);
+            book.BookID = GetLastInsertedComicID();
+            linkPersonnelToComicBook(book);
 
             return rowsAffected;
         }
@@ -105,31 +107,50 @@ namespace DataAccess
         public DataSet GetComicDetailDataSet(int comicID)
         {
             var sqlComic =
-    $@"SELECT * FROM ComicBook WHERE BookID = @BookID;
-    SELECT 
-    (
-        SELECT TOP(1) BookID as firstComicID FROM ComicBook ORDER BY BookID
-    ) as firstComicID,
-    q.previousComicID,
-    q.nextComicID,
-    (
-        SELECT TOP(1) BookID as lastComicID FROM ComicBook ORDER BY BookID Desc
-    ) as lastComicID
-    FROM
-    (
-    SELECT BookID, BookName,
-    LEAD(BookID) OVER(ORDER BY BookID) AS nextComicID,
-    LAG(BookID) OVER(ORDER BY BookID) AS previousComicID,
-        ROW_NUMBER() OVER(ORDER BY BookID) AS 'RowNumber'
-        FROM ComicBook
-    ) AS q
-    WHERE q.BookID = @BookID
-    ORDER BY q.BookID".Replace(Environment.NewLine, string.Empty);
+            $@"SELECT * FROM ComicBook WHERE BookID = @BookID;
+            SELECT 
+            (
+                SELECT TOP(1) BookID as firstComicID FROM ComicBook ORDER BY BookID
+            ) as firstComicID,
+            q.previousComicID,
+            q.nextComicID,
+            (
+                SELECT TOP(1) BookID as lastComicID FROM ComicBook ORDER BY BookID Desc
+            ) as lastComicID
+            FROM
+            (
+            SELECT BookID, BookName,
+            LEAD(BookID) OVER(ORDER BY BookID) AS nextComicID,
+            LAG(BookID) OVER(ORDER BY BookID) AS previousComicID,
+                ROW_NUMBER() OVER(ORDER BY BookID) AS 'RowNumber'
+                FROM ComicBook
+            ) AS q
+            WHERE q.BookID = @BookID
+            ORDER BY q.BookID".Replace(Environment.NewLine, string.Empty);
             var cmd = new SqlCommand(sqlComic);
             cmd.Parameters.AddWithValue("@BookID", comicID);
             var ds = DataAccess.GetDataSet(cmd);
             return ds;
         }
 
+        public int GetLastInsertedComicID()
+        {
+            var sqlString = "SELECT TOP(1)BookID FROM ComicBook ORDER BY BookID DESC";
+            var cmd = new SqlCommand(sqlString);
+            var requestedValue = DataAccess.ExecuteScalar(cmd);
+            return Convert.ToInt32(requestedValue);
+
+        }
+
+        public int linkPersonnelToComicBook(ComicBook book)
+        {
+            var sqlString = "EXEC dbo.LinkPersonnelToComicBook @bookID,@authorID,@designerID";
+            var cmd = new SqlCommand(sqlString);
+            cmd.Parameters.AddWithValue("@bookID", book.BookID);
+            cmd.Parameters.AddWithValue("@authorID", book.Author);
+            cmd.Parameters.AddWithValue("@designerID", book.Designer);
+            int rowsAffected = DataAccess.ExecuteNonQuery(cmd);
+            return rowsAffected;
+        }
     }
 }

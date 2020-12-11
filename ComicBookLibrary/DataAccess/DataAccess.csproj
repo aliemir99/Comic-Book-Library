@@ -43,6 +43,7 @@
     <Compile Include="DataAccess.cs" />
     <Compile Include="PersonnelExtension.cs" />
     <Compile Include="SqlComicBook.cs" />
+    <Compile Include="sqlLogin.cs" />
     <Compile Include="SqlPersonnel.cs" />
     <Compile Include="sqlPreFilledTables.cs" />
   </ItemGroup>

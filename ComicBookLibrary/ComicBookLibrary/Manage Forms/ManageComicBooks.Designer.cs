@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageComicBooks));
             this.grpComicBook = new System.Windows.Forms.GroupBox();
             this.cmbRatings = new System.Windows.Forms.ComboBox();
             this.lblRating = new System.Windows.Forms.Label();
@@ -64,7 +63,7 @@
             // 
             // grpComicBook
             // 
-            this.grpComicBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grpComicBook.BackgroundImage")));
+            this.grpComicBook.BackgroundImage = global::ComicBookLibrary.Properties.Resources.comicBookBackground;
             this.grpComicBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grpComicBook.Controls.Add(this.cmbRatings);
             this.grpComicBook.Controls.Add(this.lblRating);
@@ -76,6 +75,7 @@
             this.grpComicBook.Controls.Add(this.txtName);
             this.grpComicBook.Controls.Add(this.lblDescription);
             this.grpComicBook.Controls.Add(this.lblName);
+            this.grpComicBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grpComicBook.Location = new System.Drawing.Point(12, 27);
             this.grpComicBook.Name = "grpComicBook";
             this.grpComicBook.Size = new System.Drawing.Size(363, 309);
@@ -95,9 +95,10 @@
             // lblRating
             // 
             this.lblRating.AutoSize = true;
+            this.lblRating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblRating.Location = new System.Drawing.Point(33, 272);
             this.lblRating.Name = "lblRating";
-            this.lblRating.Size = new System.Drawing.Size(41, 13);
+            this.lblRating.Size = new System.Drawing.Size(43, 15);
             this.lblRating.TabIndex = 7;
             this.lblRating.Text = "Rating:";
             // 
@@ -113,9 +114,10 @@
             // lblGenre
             // 
             this.lblGenre.AutoSize = true;
+            this.lblGenre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblGenre.Location = new System.Drawing.Point(33, 234);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(39, 13);
+            this.lblGenre.Size = new System.Drawing.Size(41, 15);
             this.lblGenre.TabIndex = 6;
             this.lblGenre.Text = "Genre:";
             // 
@@ -129,9 +131,10 @@
             // lblPublishDate
             // 
             this.lblPublishDate.AutoSize = true;
+            this.lblPublishDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblPublishDate.Location = new System.Drawing.Point(30, 191);
             this.lblPublishDate.Name = "lblPublishDate";
-            this.lblPublishDate.Size = new System.Drawing.Size(70, 13);
+            this.lblPublishDate.Size = new System.Drawing.Size(72, 15);
             this.lblPublishDate.TabIndex = 4;
             this.lblPublishDate.Text = "Publish Date:";
             // 
@@ -153,24 +156,27 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
+            this.lblDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblDescription.Location = new System.Drawing.Point(33, 82);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(91, 13);
+            this.lblDescription.Size = new System.Drawing.Size(93, 15);
             this.lblDescription.TabIndex = 1;
             this.lblDescription.Text = "Book Description:";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblName.Location = new System.Drawing.Point(33, 38);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(70, 13);
+            this.lblName.Size = new System.Drawing.Size(72, 15);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Comic Name:";
             // 
             // grpCollaborator
             // 
-            this.grpCollaborator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grpCollaborator.BackgroundImage")));
+            this.grpCollaborator.BackColor = System.Drawing.SystemColors.Control;
+            this.grpCollaborator.BackgroundImage = global::ComicBookLibrary.Properties.Resources.comicGirl;
             this.grpCollaborator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grpCollaborator.Controls.Add(this.cmbDesigner);
             this.grpCollaborator.Controls.Add(this.cmbAuthor);
@@ -204,24 +210,26 @@
             // lblDesigner
             // 
             this.lblDesigner.AutoSize = true;
+            this.lblDesigner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblDesigner.Location = new System.Drawing.Point(22, 98);
             this.lblDesigner.Name = "lblDesigner";
-            this.lblDesigner.Size = new System.Drawing.Size(68, 13);
+            this.lblDesigner.Size = new System.Drawing.Size(70, 15);
             this.lblDesigner.TabIndex = 1;
             this.lblDesigner.Text = "Art Designer:";
             // 
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
+            this.lblAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAuthor.Location = new System.Drawing.Point(19, 37);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(41, 13);
+            this.lblAuthor.Size = new System.Drawing.Size(43, 15);
             this.lblAuthor.TabIndex = 0;
             this.lblAuthor.Text = "Author:";
             // 
             // grpPublisher
             // 
-            this.grpPublisher.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grpPublisher.BackgroundImage")));
+            this.grpPublisher.BackgroundImage = global::ComicBookLibrary.Properties.Resources.advtimecartoon;
             this.grpPublisher.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grpPublisher.Controls.Add(this.cmbPublisher);
             this.grpPublisher.Location = new System.Drawing.Point(401, 218);
@@ -242,7 +250,7 @@
             // 
             // grpControls
             // 
-            this.grpControls.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grpControls.BackgroundImage")));
+            this.grpControls.BackColor = System.Drawing.Color.Transparent;
             this.grpControls.Controls.Add(this.btnCancel);
             this.grpControls.Controls.Add(this.btnLast);
             this.grpControls.Controls.Add(this.btnAdd);
@@ -251,6 +259,7 @@
             this.grpControls.Controls.Add(this.btnSave);
             this.grpControls.Controls.Add(this.btnPrevious);
             this.grpControls.Controls.Add(this.btnNext);
+            this.grpControls.ForeColor = System.Drawing.Color.Transparent;
             this.grpControls.Location = new System.Drawing.Point(149, 354);
             this.grpControls.Name = "grpControls";
             this.grpControls.Size = new System.Drawing.Size(426, 124);
@@ -260,7 +269,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BackgroundImage = global::ComicBookLibrary.Properties.Resources.Yellow;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(308, 68);
             this.btnCancel.Name = "btnCancel";
@@ -272,7 +281,7 @@
             // 
             // btnLast
             // 
-            this.btnLast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLast.BackgroundImage")));
+            this.btnLast.BackgroundImage = global::ComicBookLibrary.Properties.Resources.DarkBlue;
             this.btnLast.Location = new System.Drawing.Point(308, 19);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(81, 43);
@@ -283,7 +292,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.BackgroundImage = global::ComicBookLibrary.Properties.Resources.Green;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(47, 68);
             this.btnAdd.Name = "btnAdd";
@@ -295,7 +304,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
+            this.btnDelete.BackgroundImage = global::ComicBookLibrary.Properties.Resources.Red;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(134, 68);
             this.btnDelete.Name = "btnDelete";
@@ -307,7 +316,7 @@
             // 
             // btnFirst
             // 
-            this.btnFirst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFirst.BackgroundImage")));
+            this.btnFirst.BackgroundImage = global::ComicBookLibrary.Properties.Resources.DarkBlue;
             this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFirst.Location = new System.Drawing.Point(47, 19);
             this.btnFirst.Name = "btnFirst";
@@ -319,7 +328,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
+            this.btnSave.BackgroundImage = global::ComicBookLibrary.Properties.Resources.Green;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(221, 68);
             this.btnSave.Name = "btnSave";
@@ -331,7 +340,7 @@
             // 
             // btnPrevious
             // 
-            this.btnPrevious.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrevious.BackgroundImage")));
+            this.btnPrevious.BackgroundImage = global::ComicBookLibrary.Properties.Resources.LightBlue;
             this.btnPrevious.Location = new System.Drawing.Point(134, 19);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(81, 43);
@@ -342,7 +351,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext.BackgroundImage")));
+            this.btnNext.BackgroundImage = global::ComicBookLibrary.Properties.Resources.LightBlue;
             this.btnNext.Location = new System.Drawing.Point(221, 19);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(81, 43);
@@ -355,7 +364,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::ComicBookLibrary.Properties.Resources.backgroundAbout;
             this.ClientSize = new System.Drawing.Size(766, 490);
             this.Controls.Add(this.grpControls);
             this.Controls.Add(this.grpPublisher);
